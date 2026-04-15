@@ -1,0 +1,96 @@
+/* lkcn-avatar */
+
+.lkcn-avatar {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--lkcn-bg-page, #F5F5F5);
+  border: 4rpx solid rgba(255, 255, 255, 0.6);
+  flex-shrink: 0;
+}
+
+/* ========== Shape ========== */
+
+.lkcn-avatar--circle {
+  border-radius: var(--lkcn-radius-circle, 50%);
+}
+
+.lkcn-avatar--square {
+  border-radius: var(--lkcn-radius-sm, 16rpx);
+}
+
+/* ========== Sizes ========== */
+
+.lkcn-avatar--small {
+  width: 56rpx;
+  height: 56rpx;
+}
+
+.lkcn-avatar--medium {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.lkcn-avatar--large {
+  width: 112rpx;
+  height: 112rpx;
+}
+
+/* ========== Image ========== */
+
+.lkcn-avatar__image {
+  width: 100%;
+  height: 100%;
+}
+
+/* ========== Text fallback ========== */
+
+.lkcn-avatar__text {
+  font-size: var(--lkcn-font-md, 28rpx);
+  font-weight: var(--lkcn-weight-medium, 500);
+  color: var(--lkcn-text-secondary, #666666);
+}
+
+.lkcn-avatar--small .lkcn-avatar__text {
+  font-size: var(--lkcn-font-xs, 20rpx);
+}
+
+.lkcn-avatar--large .lkcn-avatar__text {
+  font-size: var(--lkcn-font-xl, 34rpx);
+}
+
+/* ========== Icon fallback ========== */
+
+.lkcn-avatar__fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lkcn-avatar__fallback-icon {
+  width: 60%;
+  height: 60%;
+}
+
+/* ========== Level badge ========== */
+
+.lkcn-avatar__level {
+  position: absolute;
+  bottom: -4rpx;
+  right: -4rpx;
+  min-width: 32rpx;
+  height: 28rpx;
+  padding: 0 8rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18rpx;
+  font-weight: var(--lkcn-weight-semibold, 600);
+  color: var(--lkcn-text-inverse, #FFFFFF);
+  background-color: var(--lkcn-gold, #C8A26E);
+  border-radius: var(--lkcn-radius-full, 999rpx);
+  border: 2rpx solid var(--lkcn-bg-card, #FFFFFF);
+  line-height: 1;
+}

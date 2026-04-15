@@ -1,0 +1,16 @@
+<!-- lkcn-price -->
+<view class="lkcn-price {{size === 'large' ? 'lkcn-price--large' : ''}} {{customClass}}">
+  <!-- 前缀文案: "预估到手" / "一口价" / "会员价" -->
+  <text wx:if="{{prefix}}" class="lkcn-price__prefix">{{prefix}}</text>
+
+  <!-- 货币符号 + 当前价 -->
+  <text class="lkcn-price__symbol">{{symbol}}</text>
+  <text class="lkcn-price__integer">{{integerPart}}</text>
+  <text wx:if="{{decimalPart}}" class="lkcn-price__decimal">.{{decimalPart}}</text>
+
+  <!-- 原价（划线价） -->
+  <text wx:if="{{original}}" class="lkcn-price__original">{{symbol}}{{original}}</text>
+
+  <!-- 后缀: 信息图标等 -->
+  <slot></slot>
+</view>

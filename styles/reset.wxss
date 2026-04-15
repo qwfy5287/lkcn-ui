@@ -1,0 +1,19 @@
+/**
+ * LKCN UI — Base Reset
+ * 在 app.wxss 中 @import 引入
+ */
+
+page {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    sans-serif;
+  font-size: var(--lkcn-font-md);
+  color: var(--lkcn-text-primary);
+  background-color: var(--lkcn-bg-page);
+  line-height: var(--lkcn-line-normal);
+  -webkit-font-smoothing: antialiased;
+}
+
+view, text, image {
+  box-sizing: border-box;
+}

@@ -1,0 +1,60 @@
+/* lkcn-card */
+
+.lkcn-card {
+  background-color: var(--lkcn-bg-card, #FFFFFF);
+  border-radius: var(--lkcn-radius-md, 24rpx);
+  padding: var(--lkcn-card-padding, 24rpx);
+  overflow: hidden;
+}
+
+/* ========== Variants ========== */
+
+.lkcn-card--shadow {
+  box-shadow: var(--lkcn-shadow-sm, 0 2rpx 8rpx rgba(0, 0, 0, 0.04));
+}
+
+.lkcn-card--border {
+  border: 1rpx solid var(--lkcn-border-light, #F0F0F0);
+}
+
+/* ========== Header ========== */
+
+.lkcn-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--lkcn-spacing-md, 24rpx);
+}
+
+.lkcn-card__title {
+  font-size: var(--lkcn-font-xl, 34rpx);
+  font-weight: var(--lkcn-weight-semibold, 600);
+  color: var(--lkcn-text-primary, #222222);
+  line-height: var(--lkcn-line-tight, 1.2);
+}
+
+.lkcn-card__extra {
+  display: flex;
+  align-items: center;
+  gap: 4rpx;
+  font-size: var(--lkcn-font-sm, 24rpx);
+  color: var(--lkcn-text-tertiary, #999999);
+}
+
+.lkcn-card__arrow {
+  font-size: 28rpx;
+}
+
+/* ========== Body ========== */
+
+.lkcn-card__body {
+  /* No default styles — content controlled by slot */
+}
+
+/* ========== Footer ========== */
+
+.lkcn-card__footer {
+  margin-top: var(--lkcn-spacing-md, 24rpx);
+  padding-top: var(--lkcn-spacing-md, 24rpx);
+  border-top: 1rpx solid var(--lkcn-border-light, #F0F0F0);
+}

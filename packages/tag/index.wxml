@@ -1,0 +1,8 @@
+<!-- lkcn-tag -->
+<view
+  class="lkcn-tag lkcn-tag--{{type}} lkcn-tag--{{size}} lkcn-tag--{{color}} {{round ? 'lkcn-tag--round' : ''}} {{closable ? 'lkcn-tag--closable' : ''}} {{customClass}}"
+  bind:tap="onClick"
+>
+  <slot></slot>
+  <view wx:if="{{closable}}" class="lkcn-tag__close" bind:tap="onClose">×</view>
+</view>

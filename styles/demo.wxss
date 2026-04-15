@@ -1,0 +1,32 @@
+.demo-page {
+  padding-bottom: 60rpx;
+}
+
+.demo-block {
+  margin-top: 32rpx;
+}
+
+.demo-block__title {
+  display: block;
+  padding: 16rpx 28rpx;
+  font-size: 24rpx;
+  color: #999999;
+}
+
+.demo-block__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+  padding: 24rpx 28rpx;
+  background-color: #FFFFFF;
+}
+
+.demo-block__content--vertical {
+  flex-direction: column;
+}
+
+.demo-block__content--flush {
+  padding: 0;
+  flex-direction: column;
+  gap: 0;
+}

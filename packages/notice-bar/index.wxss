@@ -1,0 +1,83 @@
+/* lkcn-notice-bar */
+
+.lkcn-notice-bar {
+  display: flex;
+  align-items: center;
+  padding: 20rpx var(--lkcn-page-padding, 28rpx);
+  border-radius: var(--lkcn-radius-sm, 16rpx);
+  gap: var(--lkcn-spacing-sm, 16rpx);
+}
+
+/* ========== Theme variants ========== */
+
+.lkcn-notice-bar--blue {
+  background-color: var(--lkcn-blue-light, #EEF4FF);
+}
+
+.lkcn-notice-bar--blue .lkcn-notice-bar__text,
+.lkcn-notice-bar--blue .lkcn-notice-bar__extra {
+  color: var(--lkcn-blue, #1A6EFF);
+}
+
+.lkcn-notice-bar--orange {
+  background-color: var(--lkcn-orange-light, #FFF5EE);
+}
+
+.lkcn-notice-bar--orange .lkcn-notice-bar__text,
+.lkcn-notice-bar--orange .lkcn-notice-bar__extra {
+  color: var(--lkcn-orange, #FF6B35);
+}
+
+.lkcn-notice-bar--gold {
+  background-color: var(--lkcn-gold-light, #FBF5EB);
+}
+
+.lkcn-notice-bar--gold .lkcn-notice-bar__text,
+.lkcn-notice-bar--gold .lkcn-notice-bar__extra {
+  color: var(--lkcn-gold, #C8A26E);
+}
+
+.lkcn-notice-bar--default {
+  background-color: var(--lkcn-bg-page, #F5F5F5);
+}
+
+/* ========== Icon ========== */
+
+.lkcn-notice-bar__icon {
+  width: 48rpx;
+  height: 48rpx;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+/* ========== Content ========== */
+
+.lkcn-notice-bar__content {
+  flex: 1;
+  overflow: hidden;
+}
+
+.lkcn-notice-bar__text {
+  font-size: var(--lkcn-font-md, 28rpx);
+  color: var(--lkcn-text-primary, #222222);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ========== Extra (right side) ========== */
+
+.lkcn-notice-bar__extra {
+  font-size: var(--lkcn-font-sm, 24rpx);
+  color: var(--lkcn-text-secondary, #666666);
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* ========== Arrow ========== */
+
+.lkcn-notice-bar__arrow {
+  font-size: 28rpx;
+  color: var(--lkcn-text-tertiary, #999999);
+  flex-shrink: 0;
+}

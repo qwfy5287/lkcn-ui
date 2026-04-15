@@ -1,0 +1,55 @@
+<view class="demo-page">
+  <view class="demo-block">
+    <text class="demo-block__title">商品列表</text>
+    <view class="demo-block__content demo-block__content--flush">
+      <lkcn-product-card
+        image="https://placehold.co/200x200/F5F5F5/999?text=Coconut"
+        title="生椰拿铁（首创）"
+        tags="{{['全球销量第一', '瑞幸专属生椰岛']}}"
+        desc="累计销量超20亿杯 | IIAC金奖"
+        price="9.9"
+        original-price="32"
+        price-prefix="预估到手"
+        bind:add="onAdd"
+      />
+      <lkcn-product-card
+        image="https://placehold.co/200x200/F5F5F5/999?text=Iced"
+        title="椰青冰萃美式"
+        tags="{{['100%清爽椰子水', '0脂百大卡']}}"
+        desc="含电解质的美式，一杯≈1个椰子"
+        price="12.9"
+        original-price="32"
+        price-prefix="一口价"
+        badge="回归"
+        badge-color="orange"
+        bind:add="onAdd"
+      />
+      <lkcn-product-card
+        image="https://placehold.co/200x200/F5F5F5/999?text=Bitter"
+        title="苦瓜轻体美式"
+        tags="{{['超级植物苦瓜', '24小时鲜榨']}}"
+        desc="8种鲜爽果蔬碰撞醇香咖啡，清爽回甘"
+        price="11.9"
+        original-price="32"
+        price-prefix="一口价"
+        badge="新品"
+        badge-color="blue"
+        bind:add="onAdd"
+      />
+    </view>
+  </view>
+
+  <view class="demo-block">
+    <text class="demo-block__title">Stepper 步进器</text>
+    <view class="demo-block__content" style="gap: 32rpx;">
+      <view style="display:flex;align-items:center;gap:16rpx;">
+        <text style="font-size:28rpx;">初始态（+按钮）</text>
+        <lkcn-stepper value="{{count1}}" bind:change="onCount1Change" />
+      </view>
+      <view style="display:flex;align-items:center;gap:16rpx;">
+        <text style="font-size:28rpx;">展开态（已加购）</text>
+        <lkcn-stepper value="{{count2}}" bind:change="onCount2Change" />
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,171 @@
+/* lkcn-button */
+
+.lkcn-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8rpx;
+  padding: 0 32rpx;
+  margin: 0;
+  font-size: var(--lkcn-font-md, 28rpx);
+  font-weight: var(--lkcn-weight-medium, 500);
+  line-height: 1;
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+  outline: none;
+  border-radius: var(--lkcn-radius-sm, 16rpx);
+  transition: opacity var(--lkcn-duration-fast, 150ms) var(--lkcn-ease-default);
+  -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Remove default button styles */
+.lkcn-btn::after {
+  display: none;
+}
+
+/* ========== Types ========== */
+
+/* Primary — Brand Blue filled */
+.lkcn-btn--primary {
+  background-color: var(--lkcn-blue, #1A6EFF);
+  color: var(--lkcn-text-inverse, #FFFFFF);
+}
+
+.lkcn-btn--primary.lkcn-btn--plain {
+  background-color: transparent;
+  color: var(--lkcn-blue, #1A6EFF);
+  border: 2rpx solid var(--lkcn-blue, #1A6EFF);
+}
+
+/* CTA — Orange filled, for promotional actions */
+.lkcn-btn--cta {
+  background-color: var(--lkcn-orange, #FF6B35);
+  color: var(--lkcn-text-inverse, #FFFFFF);
+}
+
+.lkcn-btn--cta.lkcn-btn--plain {
+  background-color: transparent;
+  color: var(--lkcn-orange, #FF6B35);
+  border: 2rpx solid var(--lkcn-orange, #FF6B35);
+}
+
+/* Secondary — Light gray filled */
+.lkcn-btn--secondary {
+  background-color: var(--lkcn-bg-page, #F5F5F5);
+  color: var(--lkcn-text-primary, #222222);
+}
+
+.lkcn-btn--secondary.lkcn-btn--plain {
+  background-color: transparent;
+  color: var(--lkcn-text-primary, #222222);
+  border: 2rpx solid var(--lkcn-border-default, #E5E5E5);
+}
+
+/* Text — No background, link-style */
+.lkcn-btn--text {
+  background-color: transparent;
+  color: var(--lkcn-blue, #1A6EFF);
+  padding: 0;
+}
+
+/* Gold — VIP / membership */
+.lkcn-btn--gold {
+  background-color: var(--lkcn-gold, #C8A26E);
+  color: var(--lkcn-text-inverse, #FFFFFF);
+}
+
+/* Default fallback */
+.lkcn-btn--default {
+  background-color: var(--lkcn-bg-card, #FFFFFF);
+  color: var(--lkcn-text-primary, #222222);
+  border: 2rpx solid var(--lkcn-border-default, #E5E5E5);
+}
+
+/* ========== Sizes ========== */
+
+.lkcn-btn--small {
+  height: 56rpx;
+  padding: 0 20rpx;
+  font-size: var(--lkcn-font-sm, 24rpx);
+  border-radius: var(--lkcn-radius-xs, 8rpx);
+}
+
+.lkcn-btn--medium {
+  height: 72rpx;
+  padding: 0 32rpx;
+  font-size: var(--lkcn-font-md, 28rpx);
+}
+
+.lkcn-btn--large {
+  height: 88rpx;
+  padding: 0 48rpx;
+  font-size: var(--lkcn-font-lg, 30rpx);
+  font-weight: var(--lkcn-weight-semibold, 600);
+}
+
+/* ========== Modifiers ========== */
+
+.lkcn-btn--block {
+  display: flex;
+  width: 100%;
+}
+
+.lkcn-btn--round {
+  border-radius: var(--lkcn-radius-full, 999rpx);
+}
+
+.lkcn-btn--disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.lkcn-btn--active {
+  opacity: 0.75;
+}
+
+/* ========== Icon ========== */
+
+.lkcn-btn__icon {
+  width: 32rpx;
+  height: 32rpx;
+  flex-shrink: 0;
+}
+
+.lkcn-btn--small .lkcn-btn__icon {
+  width: 28rpx;
+  height: 28rpx;
+}
+
+/* ========== Loading ========== */
+
+.lkcn-btn--loading {
+  pointer-events: none;
+}
+
+.lkcn-btn__loading {
+  margin-right: 8rpx;
+}
+
+.lkcn-btn__loading-dot {
+  width: 28rpx;
+  height: 28rpx;
+  border: 3rpx solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: lkcn-btn-spin 0.6s linear infinite;
+}
+
+@keyframes lkcn-btn-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ========== Text slot ========== */
+
+.lkcn-btn__text {
+  display: inline-flex;
+  align-items: center;
+}

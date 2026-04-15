@@ -1,0 +1,88 @@
+/* lkcn-stepper */
+
+.lkcn-stepper {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ========== Solo add button (collapsed state) ========== */
+
+.lkcn-stepper__add--solo {
+  width: 52rpx;
+  height: 52rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--lkcn-blue, #1A6EFF);
+  border-radius: 50%;
+  transition: transform var(--lkcn-duration-fast, 150ms) var(--lkcn-ease-bounce);
+}
+
+.lkcn-stepper__add--solo:active {
+  transform: scale(0.88);
+}
+
+.lkcn-stepper__add--solo .lkcn-stepper__icon {
+  color: var(--lkcn-text-inverse, #FFFFFF);
+  font-size: 36rpx;
+  font-weight: var(--lkcn-weight-medium, 500);
+  line-height: 1;
+}
+
+/* ========== Expanded controls ========== */
+
+.lkcn-stepper__controls {
+  display: flex;
+  align-items: center;
+  gap: 4rpx;
+}
+
+.lkcn-stepper__btn {
+  width: 48rpx;
+  height: 48rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all var(--lkcn-duration-fast, 150ms);
+}
+
+.lkcn-stepper__btn--minus {
+  background-color: var(--lkcn-bg-page, #F5F5F5);
+}
+
+.lkcn-stepper__btn--minus .lkcn-stepper__icon {
+  color: var(--lkcn-text-secondary, #666666);
+  font-size: 28rpx;
+  line-height: 1;
+}
+
+.lkcn-stepper__btn--plus {
+  background-color: var(--lkcn-blue, #1A6EFF);
+}
+
+.lkcn-stepper__btn--plus .lkcn-stepper__icon {
+  color: var(--lkcn-text-inverse, #FFFFFF);
+  font-size: 28rpx;
+  line-height: 1;
+}
+
+.lkcn-stepper__btn--disabled {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.lkcn-stepper__btn:active {
+  transform: scale(0.9);
+}
+
+/* ========== Value ========== */
+
+.lkcn-stepper__value {
+  min-width: 48rpx;
+  text-align: center;
+  font-size: var(--lkcn-font-md, 28rpx);
+  font-weight: var(--lkcn-weight-semibold, 600);
+  color: var(--lkcn-text-primary, #222222);
+  font-variant-numeric: tabular-nums;
+}

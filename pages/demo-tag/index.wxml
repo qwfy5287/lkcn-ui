@@ -1,0 +1,37 @@
+<view class="demo-page">
+  <view class="demo-block">
+    <text class="demo-block__title">标签类型</text>
+    <view class="demo-block__content">
+      <lkcn-tag type="filled">新品</lkcn-tag>
+      <lkcn-tag type="outlined">全球销量第一</lkcn-tag>
+      <lkcn-tag type="light">瑞幸专属生椰岛</lkcn-tag>
+      <lkcn-tag type="plain">IIAC金奖</lkcn-tag>
+    </view>
+  </view>
+  <view class="demo-block">
+    <text class="demo-block__title">颜色变体</text>
+    <view class="demo-block__content">
+      <lkcn-tag type="filled" color="blue">新品</lkcn-tag>
+      <lkcn-tag type="filled" color="orange">限时</lkcn-tag>
+      <lkcn-tag type="filled" color="green">0脂</lkcn-tag>
+      <lkcn-tag type="filled" color="gold">VIP</lkcn-tag>
+    </view>
+  </view>
+  <view class="demo-block">
+    <text class="demo-block__title">描边 + 颜色</text>
+    <view class="demo-block__content">
+      <lkcn-tag type="outlined" color="blue">100%清爽椰子水</lkcn-tag>
+      <lkcn-tag type="outlined" color="orange">回归</lkcn-tag>
+      <lkcn-tag type="outlined" color="green">0脂百大卡</lkcn-tag>
+    </view>
+  </view>
+  <view class="demo-block">
+    <text class="demo-block__title">尺寸 & 圆角</text>
+    <view class="demo-block__content">
+      <lkcn-tag type="filled" size="small">小号</lkcn-tag>
+      <lkcn-tag type="filled" size="medium">中号</lkcn-tag>
+      <lkcn-tag type="filled" size="large">大号</lkcn-tag>
+      <lkcn-tag type="filled" round>胶囊标签</lkcn-tag>
+    </view>
+  </view>
+</view>

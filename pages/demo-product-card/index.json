@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "ProductCard 商品卡片",
+  "usingComponents": {
+    "lkcn-product-card": "../../packages/product-card/index",
+    "lkcn-stepper": "../../packages/stepper/index"
+  }
+}

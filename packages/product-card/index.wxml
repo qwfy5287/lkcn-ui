@@ -1,0 +1,53 @@
+<!-- lkcn-product-card -->
+<view class="lkcn-product-card {{customClass}}" bind:tap="onCardTap">
+  <!-- 商品图片 -->
+  <view class="lkcn-product-card__image-wrap">
+    <image
+      class="lkcn-product-card__image"
+      src="{{image}}"
+      mode="aspectFill"
+      lazy-load
+    />
+    <!-- 角标: 新品 / 回归 / 限时 -->
+    <view wx:if="{{badge}}" class="lkcn-product-card__badge lkcn-product-card__badge--{{badgeColor}}">
+      {{badge}}
+    </view>
+  </view>
+
+  <!-- 商品信息 -->
+  <view class="lkcn-product-card__info">
+    <!-- 标题 -->
+    <text class="lkcn-product-card__title">{{title}}</text>
+
+    <!-- 标签列表 -->
+    <view wx:if="{{tags.length}}" class="lkcn-product-card__tags">
+      <view
+        wx:for="{{tags}}"
+        wx:key="index"
+        class="lkcn-product-card__tag"
+      >{{item}}</view>
+    </view>
+
+    <!-- 描述 -->
+    <text wx:if="{{desc}}" class="lkcn-product-card__desc">{{desc}}</text>
+
+    <!-- 底部: 价格 + 加购按钮 -->
+    <view class="lkcn-product-card__footer">
+      <view class="lkcn-product-card__price-wrap">
+        <view wx:if="{{pricePrefix}}" class="lkcn-product-card__price-prefix">{{pricePrefix}}</view>
+        <view class="lkcn-product-card__price">
+          <text class="lkcn-product-card__price-symbol">¥</text>
+          <text class="lkcn-product-card__price-value">{{price}}</text>
+        </view>
+        <text wx:if="{{originalPrice}}" class="lkcn-product-card__price-original">
+          面价 ¥{{originalPrice}}
+        </text>
+      </view>
+
+      <!-- 加购按钮 -->
+      <view class="lkcn-product-card__add" bind:tap="onAdd" catchtap="onAdd">
+        <view class="lkcn-product-card__add-icon">+</view>
+      </view>
+    </view>
+  </view>
+</view>

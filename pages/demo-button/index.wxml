@@ -1,0 +1,60 @@
+<view class="demo-page">
+
+  <view class="demo-block">
+    <text class="demo-block__title">按钮类型</text>
+    <view class="demo-block__content">
+      <lkcn-button type="primary">主要按钮</lkcn-button>
+      <lkcn-button type="cta">CTA 按钮</lkcn-button>
+      <lkcn-button type="secondary">次要按钮</lkcn-button>
+      <lkcn-button type="gold">会员按钮</lkcn-button>
+      <lkcn-button type="default">默认按钮</lkcn-button>
+      <lkcn-button type="text">文字按钮</lkcn-button>
+    </view>
+  </view>
+
+  <view class="demo-block">
+    <text class="demo-block__title">朴素按钮</text>
+    <view class="demo-block__content">
+      <lkcn-button type="primary" plain>主要按钮</lkcn-button>
+      <lkcn-button type="cta" plain>CTA 按钮</lkcn-button>
+      <lkcn-button type="secondary" plain>次要按钮</lkcn-button>
+    </view>
+  </view>
+
+  <view class="demo-block">
+    <text class="demo-block__title">按钮尺寸</text>
+    <view class="demo-block__content">
+      <lkcn-button type="primary" size="large">大号按钮</lkcn-button>
+      <lkcn-button type="primary" size="medium">中号按钮</lkcn-button>
+      <lkcn-button type="primary" size="small">小号按钮</lkcn-button>
+    </view>
+  </view>
+
+  <view class="demo-block">
+    <text class="demo-block__title">块级按钮</text>
+    <view class="demo-block__content demo-block__content--vertical">
+      <lkcn-button type="primary" block round size="large">开通连续包月 ¥9.90</lkcn-button>
+      <lkcn-button type="cta" block round size="large">立即领取</lkcn-button>
+      <lkcn-button type="secondary" block plain>取消</lkcn-button>
+    </view>
+  </view>
+
+  <view class="demo-block">
+    <text class="demo-block__title">圆角胶囊</text>
+    <view class="demo-block__content">
+      <lkcn-button type="primary" round>立即购买</lkcn-button>
+      <lkcn-button type="cta" round size="small">开卡立享</lkcn-button>
+      <lkcn-button type="default" round size="small">使用</lkcn-button>
+    </view>
+  </view>
+
+  <view class="demo-block">
+    <text class="demo-block__title">加载 & 禁用</text>
+    <view class="demo-block__content">
+      <lkcn-button type="primary" loading>加载中</lkcn-button>
+      <lkcn-button type="primary" disabled>已禁用</lkcn-button>
+      <lkcn-button type="cta" disabled>已禁用</lkcn-button>
+    </view>
+  </view>
+
+</view>

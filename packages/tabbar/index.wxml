@@ -1,0 +1,28 @@
+<!-- lkcn-tabbar -->
+<view class="lkcn-tabbar {{border ? 'lkcn-tabbar--border' : ''}} {{fixed ? 'lkcn-tabbar--fixed' : ''}} {{customClass}}">
+  <view
+    wx:for="{{items}}"
+    wx:key="index"
+    class="lkcn-tabbar__item {{active === index ? 'lkcn-tabbar__item--active' : ''}}"
+    data-index="{{index}}"
+    bind:tap="onItemTap"
+  >
+    <!-- Icon -->
+    <view class="lkcn-tabbar__icon-wrap">
+      <image
+        class="lkcn-tabbar__icon"
+        src="{{active === index ? (item.activeIcon || item.icon) : item.icon}}"
+        mode="aspectFit"
+      />
+      <!-- Badge -->
+      <view wx:if="{{item.badge}}" class="lkcn-tabbar__badge">{{item.badge}}</view>
+      <view wx:elif="{{item.dot}}" class="lkcn-tabbar__dot"></view>
+    </view>
+
+    <!-- Label -->
+    <text class="lkcn-tabbar__label">{{item.text}}</text>
+  </view>
+</view>
+
+<!-- Placeholder to prevent content from being hidden behind fixed tabbar -->
+<view wx:if="{{fixed && placeholder}}" class="lkcn-tabbar__placeholder"></view>

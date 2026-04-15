@@ -1,0 +1,21 @@
+<!-- lkcn-promo-card -->
+<view
+  class="lkcn-promo-card lkcn-promo-card--{{layout}} {{customClass}}"
+  style="background-color: {{bgColor || ''}}; background-image: {{bgImage ? 'url(' + bgImage + ')' : 'none'}};"
+  bind:tap="onTap"
+>
+  <view class="lkcn-promo-card__content">
+    <text wx:if="{{title}}" class="lkcn-promo-card__title" style="color: {{titleColor || ''}}">{{title}}</text>
+    <text wx:if="{{subtitle}}" class="lkcn-promo-card__subtitle" style="color: {{subtitleColor || ''}}">{{subtitle}}</text>
+    <view wx:if="{{actionText}}" class="lkcn-promo-card__action" bind:tap="onActionTap">
+      <text class="lkcn-promo-card__action-text">{{actionText}}</text>
+      <text class="lkcn-promo-card__action-arrow">›</text>
+    </view>
+  </view>
+  <image
+    wx:if="{{image}}"
+    class="lkcn-promo-card__image"
+    src="{{image}}"
+    mode="aspectFit"
+  />
+</view>

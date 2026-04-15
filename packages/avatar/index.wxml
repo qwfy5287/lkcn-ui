@@ -1,0 +1,21 @@
+<!-- lkcn-avatar -->
+<view class="lkcn-avatar lkcn-avatar--{{size}} lkcn-avatar--{{shape}} {{customClass}}">
+  <image
+    wx:if="{{src}}"
+    class="lkcn-avatar__image"
+    src="{{src}}"
+    mode="aspectFill"
+    bind:error="onError"
+  />
+  <view wx:elif="{{text}}" class="lkcn-avatar__text">{{text}}</view>
+  <view wx:else class="lkcn-avatar__fallback">
+    <image
+      class="lkcn-avatar__fallback-icon"
+      src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='1.5'%3E%3Ccircle cx='12' cy='8' r='4'/%3E%3Cpath d='M20 21a8 8 0 1 0-16 0'/%3E%3C/svg%3E"
+      mode="aspectFit"
+    />
+  </view>
+
+  <!-- Level indicator badge -->
+  <view wx:if="{{level}}" class="lkcn-avatar__level">{{level}}</view>
+</view>

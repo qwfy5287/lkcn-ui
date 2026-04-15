@@ -1,0 +1,42 @@
+{
+  "description": "LKCN UI — 瑞幸风格微信小程序组件库",
+  "packOptions": {
+    "ignore": [
+      { "type": "file", "value": "README.md" },
+      { "type": "file", "value": "LICENSE" },
+      { "type": "file", "value": ".gitignore" },
+      { "type": "folder", "value": ".github" },
+      { "type": "folder", "value": "docs" },
+      { "type": "folder", "value": "node_modules" }
+    ]
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": true,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    }
+  },
+  "compileType": "miniprogram",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "appid": "touristappid",
+  "projectname": "lkcn-ui",
+  "condition": {}
+}

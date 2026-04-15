@@ -1,0 +1,35 @@
+<view class="demo-page">
+  <view class="demo-block">
+    <text class="demo-block__title">SearchBar 搜索栏</text>
+    <lkcn-search-bar
+      value="{{searchVal}}"
+      placeholder="埃塞金烘系列上市..."
+      bind:input="onSearchInput"
+      bind:search="onSearch"
+    />
+  </view>
+
+  <view class="demo-block">
+    <text class="demo-block__title">LocationBar 定位栏</text>
+    <lkcn-location-bar
+      name="希尼亚国际大厦店"
+      distance="101m"
+      bind:tap="onLocationTap"
+    />
+  </view>
+
+  <view class="demo-block">
+    <text class="demo-block__title">CategorySidebar 分类侧边栏</text>
+    <view style="display:flex; height:600rpx; background:#fff;">
+      <lkcn-category-sidebar
+        categories="{{categories}}"
+        active="{{catActive}}"
+        height="600rpx"
+        bind:change="onCatChange"
+      />
+      <view style="flex:1;display:flex;align-items:center;justify-content:center;font-size:28rpx;color:#999;">
+        {{categories[catActive].text || categories[catActive]}} 的内容区域
+      </view>
+    </view>
+  </view>
+</view>

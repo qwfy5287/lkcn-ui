@@ -1,0 +1,55 @@
+<view class="demo-index">
+  <view class="demo-header">
+    <text class="demo-header__title">LKCN UI</text>
+    <text class="demo-header__desc">☕ 瑞幸风格微信小程序组件库</text>
+    <text class="demo-header__version">v1.0.0 · 22 components</text>
+  </view>
+
+  <view class="demo-section">
+    <text class="demo-section__title">基础组件</text>
+    <view class="demo-nav">
+      <navigator
+        wx:for="{{basicComponents}}"
+        wx:key="name"
+        url="{{item.path}}"
+        class="demo-nav__item"
+      >
+        <text class="demo-nav__name">{{item.name}}</text>
+        <text class="demo-nav__desc">{{item.desc}}</text>
+        <text class="demo-nav__arrow">›</text>
+      </navigator>
+    </view>
+  </view>
+
+  <view class="demo-section">
+    <text class="demo-section__title">数据展示</text>
+    <view class="demo-nav">
+      <navigator
+        wx:for="{{displayComponents}}"
+        wx:key="name"
+        url="{{item.path}}"
+        class="demo-nav__item"
+      >
+        <text class="demo-nav__name">{{item.name}}</text>
+        <text class="demo-nav__desc">{{item.desc}}</text>
+        <text class="demo-nav__arrow">›</text>
+      </navigator>
+    </view>
+  </view>
+
+  <view class="demo-section">
+    <text class="demo-section__title">业务组件</text>
+    <view class="demo-nav">
+      <navigator
+        wx:for="{{bizComponents}}"
+        wx:key="name"
+        url="{{item.path}}"
+        class="demo-nav__item"
+      >
+        <text class="demo-nav__name">{{item.name}}</text>
+        <text class="demo-nav__desc">{{item.desc}}</text>
+        <text class="demo-nav__arrow">›</text>
+      </navigator>
+    </view>
+  </view>
+</view>

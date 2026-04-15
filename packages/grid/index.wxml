@@ -1,0 +1,32 @@
+<!-- lkcn-grid -->
+<view class="lkcn-grid lkcn-grid--col-{{column}} {{border ? 'lkcn-grid--border' : ''}} {{customClass}}">
+  <view
+    wx:for="{{items}}"
+    wx:key="index"
+    class="lkcn-grid__item"
+    data-index="{{index}}"
+    data-item="{{item}}"
+    bind:tap="onItemTap"
+  >
+    <!-- Icon: 支持图片 URL 或 slot -->
+    <view class="lkcn-grid__icon-wrap">
+      <image
+        wx:if="{{item.icon}}"
+        class="lkcn-grid__icon"
+        src="{{item.icon}}"
+        mode="aspectFit"
+      />
+      <!-- Badge on icon -->
+      <view wx:if="{{item.badge}}" class="lkcn-grid__badge">
+        {{item.badge}}
+      </view>
+      <view wx:if="{{item.dot}}" class="lkcn-grid__dot"></view>
+    </view>
+
+    <!-- Text -->
+    <text class="lkcn-grid__text">{{item.text}}</text>
+
+    <!-- Description (optional) -->
+    <text wx:if="{{item.desc}}" class="lkcn-grid__desc">{{item.desc}}</text>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "导航组件",
+  "usingComponents": {
+    "lkcn-search-bar": "../../packages/search-bar/index",
+    "lkcn-location-bar": "../../packages/location-bar/index",
+    "lkcn-category-sidebar": "../../packages/category-sidebar/index"
+  }
+}

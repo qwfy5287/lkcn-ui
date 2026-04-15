@@ -1,0 +1,44 @@
+<!-- lkcn-category-sidebar -->
+<scroll-view
+  class="lkcn-category-sidebar {{customClass}}"
+  scroll-y
+  scroll-with-animation
+  scroll-into-view="cat-{{active}}"
+  enhanced
+  show-scrollbar="{{false}}"
+  style="height: {{height || '100vh'}}"
+>
+  <view
+    wx:for="{{categories}}"
+    wx:key="index"
+    id="cat-{{index}}"
+    class="lkcn-category-sidebar__item {{active === index ? 'lkcn-category-sidebar__item--active' : ''}}"
+    data-index="{{index}}"
+    bind:tap="onItemTap"
+  >
+    <!-- Active indicator bar -->
+    <view
+      wx:if="{{active === index}}"
+      class="lkcn-category-sidebar__indicator"
+    ></view>
+
+    <!-- Icon (optional) -->
+    <image
+      wx:if="{{item.icon}}"
+      class="lkcn-category-sidebar__icon"
+      src="{{item.icon}}"
+      mode="aspectFit"
+    />
+
+    <!-- Badge tag (optional, like 周边NEW, 产地季) -->
+    <view wx:if="{{item.tag}}" class="lkcn-category-sidebar__tag lkcn-category-sidebar__tag--{{item.tagColor || 'blue'}}">
+      {{item.tag}}
+    </view>
+
+    <!-- Text -->
+    <text class="lkcn-category-sidebar__text">{{item.text || item}}</text>
+
+    <!-- Badge dot -->
+    <view wx:if="{{item.dot}}" class="lkcn-category-sidebar__dot"></view>
+  </view>
+</scroll-view>

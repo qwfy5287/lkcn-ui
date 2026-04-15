@@ -1,0 +1,175 @@
+/* lkcn-product-card */
+
+.lkcn-product-card {
+  display: flex;
+  flex-direction: row;
+  padding: var(--lkcn-card-padding, 24rpx);
+  background-color: var(--lkcn-bg-card, #FFFFFF);
+  border-bottom: 1rpx solid var(--lkcn-border-light, #F0F0F0);
+}
+
+/* ========== Image ========== */
+
+.lkcn-product-card__image-wrap {
+  position: relative;
+  flex-shrink: 0;
+  width: 200rpx;
+  height: 200rpx;
+  margin-right: var(--lkcn-spacing-md, 24rpx);
+}
+
+.lkcn-product-card__image {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--lkcn-radius-sm, 16rpx);
+  background-color: var(--lkcn-bg-page, #F5F5F5);
+}
+
+/* ========== Badge overlay on image ========== */
+
+.lkcn-product-card__badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 4rpx 12rpx;
+  font-size: 18rpx;
+  font-weight: var(--lkcn-weight-medium, 500);
+  color: var(--lkcn-text-inverse, #FFFFFF);
+  background-color: var(--lkcn-blue, #1A6EFF);
+  border-radius: var(--lkcn-radius-sm, 16rpx) 0 var(--lkcn-radius-sm, 16rpx) 0;
+  line-height: 1.5;
+}
+
+.lkcn-product-card__badge--orange {
+  background-color: var(--lkcn-orange, #FF6B35);
+}
+
+.lkcn-product-card__badge--green {
+  background-color: var(--lkcn-green, #2B7D5B);
+}
+
+/* ========== Info area ========== */
+
+.lkcn-product-card__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0; /* prevent flex overflow */
+}
+
+/* ========== Title ========== */
+
+.lkcn-product-card__title {
+  font-size: var(--lkcn-font-lg, 30rpx);
+  font-weight: var(--lkcn-weight-medium, 500);
+  color: var(--lkcn-text-primary, #222222);
+  line-height: var(--lkcn-line-tight, 1.2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ========== Tags row ========== */
+
+.lkcn-product-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8rpx;
+  margin-top: 12rpx;
+}
+
+.lkcn-product-card__tag {
+  display: inline-block;
+  padding: 2rpx 10rpx;
+  font-size: 18rpx;
+  color: var(--lkcn-blue, #1A6EFF);
+  border: 1rpx solid var(--lkcn-blue, #1A6EFF);
+  border-radius: var(--lkcn-radius-xs, 8rpx);
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+/* ========== Description ========== */
+
+.lkcn-product-card__desc {
+  font-size: var(--lkcn-font-sm, 24rpx);
+  color: var(--lkcn-text-secondary, #666666);
+  line-height: var(--lkcn-line-normal, 1.5);
+  margin-top: 8rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ========== Footer: price + add button ========== */
+
+.lkcn-product-card__footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 12rpx;
+}
+
+.lkcn-product-card__price-wrap {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4rpx;
+}
+
+.lkcn-product-card__price-prefix {
+  font-size: var(--lkcn-font-sm, 24rpx);
+  color: var(--lkcn-text-price, #FF6B35);
+  font-weight: var(--lkcn-weight-regular, 400);
+}
+
+.lkcn-product-card__price {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.lkcn-product-card__price-symbol {
+  font-size: var(--lkcn-font-sm, 24rpx);
+  color: var(--lkcn-text-price, #FF6B35);
+  font-weight: var(--lkcn-weight-bold, 700);
+}
+
+.lkcn-product-card__price-value {
+  font-size: var(--lkcn-font-price, 36rpx);
+  color: var(--lkcn-text-price, #FF6B35);
+  font-weight: var(--lkcn-weight-bold, 700);
+  font-variant-numeric: tabular-nums;
+}
+
+.lkcn-product-card__price-original {
+  font-size: var(--lkcn-font-sm, 24rpx);
+  color: var(--lkcn-text-tertiary, #999999);
+  text-decoration: line-through;
+  margin-left: 8rpx;
+}
+
+/* ========== Add to cart button ========== */
+
+.lkcn-product-card__add {
+  flex-shrink: 0;
+}
+
+.lkcn-product-card__add-icon {
+  width: 52rpx;
+  height: 52rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--lkcn-blue, #1A6EFF);
+  color: var(--lkcn-text-inverse, #FFFFFF);
+  border-radius: 50%;
+  font-size: 36rpx;
+  font-weight: var(--lkcn-weight-medium, 500);
+  line-height: 1;
+  transition: transform var(--lkcn-duration-fast, 150ms) var(--lkcn-ease-bounce);
+}
+
+.lkcn-product-card__add-icon:active {
+  transform: scale(0.88);
+}

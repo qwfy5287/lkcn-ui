@@ -1,0 +1,14 @@
+<!-- lkcn-badge -->
+<view class="lkcn-badge {{customClass}}">
+  <slot></slot>
+  <view
+    wx:if="{{dot}}"
+    class="lkcn-badge__dot"
+    style="{{offset ? 'top:' + offset[0] + ';right:' + offset[1] : ''}}"
+  ></view>
+  <view
+    wx:elif="{{content !== '' && content !== undefined}}"
+    class="lkcn-badge__content {{Number(content) > 99 ? 'lkcn-badge__content--large' : ''}}"
+    style="{{offset ? 'top:' + offset[0] + ';right:' + offset[1] : ''}}"
+  >{{display}}</view>
+</view>

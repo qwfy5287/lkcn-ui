@@ -1,0 +1,51 @@
+/* lkcn-segment */
+
+.lkcn-segment {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--lkcn-bg-page, #F5F5F5);
+  border-radius: var(--lkcn-radius-sm, 16rpx);
+  padding: 4rpx;
+  overflow: hidden;
+}
+
+.lkcn-segment--round {
+  border-radius: var(--lkcn-radius-full, 999rpx);
+}
+
+/* ========== Item ========== */
+
+.lkcn-segment__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16rpx 32rpx;
+  border-radius: var(--lkcn-radius-sm, 16rpx);
+  transition: all var(--lkcn-duration-fast, 150ms) var(--lkcn-ease-default);
+  cursor: pointer;
+}
+
+.lkcn-segment--round .lkcn-segment__item {
+  border-radius: var(--lkcn-radius-full, 999rpx);
+}
+
+/* Active state — Luckin uses dark filled active */
+.lkcn-segment__item--active {
+  background-color: var(--lkcn-text-primary, #222222);
+}
+
+/* ========== Text ========== */
+
+.lkcn-segment__text {
+  font-size: var(--lkcn-font-md, 28rpx);
+  font-weight: var(--lkcn-weight-medium, 500);
+  color: var(--lkcn-text-secondary, #666666);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.lkcn-segment__item--active .lkcn-segment__text {
+  color: var(--lkcn-text-inverse, #FFFFFF);
+  font-weight: var(--lkcn-weight-semibold, 600);
+}

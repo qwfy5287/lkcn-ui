@@ -1,0 +1,20 @@
+<!-- lkcn-card -->
+<view
+  class="lkcn-card {{shadow ? 'lkcn-card--shadow' : ''}} {{border ? 'lkcn-card--border' : ''}} {{customClass}}"
+  style="{{padding === false ? 'padding:0' : ''}}; border-radius: {{radius || ''}};"
+  bind:tap="onClick"
+>
+  <view wx:if="{{title}}" class="lkcn-card__header">
+    <text class="lkcn-card__title">{{title}}</text>
+    <view wx:if="{{extra}}" class="lkcn-card__extra" bind:tap="onExtraTap">
+      <text>{{extra}}</text>
+      <text class="lkcn-card__arrow">›</text>
+    </view>
+  </view>
+  <view class="lkcn-card__body">
+    <slot></slot>
+  </view>
+  <view wx:if="{{footer}}" class="lkcn-card__footer">
+    <slot name="footer"></slot>
+  </view>
+</view>

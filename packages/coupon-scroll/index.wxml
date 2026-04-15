@@ -1,0 +1,29 @@
+<!-- lkcn-coupon-scroll -->
+<scroll-view
+  class="lkcn-coupon-scroll {{customClass}}"
+  scroll-x
+  scroll-with-animation
+  enhanced
+  show-scrollbar="{{false}}"
+>
+  <view class="lkcn-coupon-scroll__list">
+    <view
+      wx:for="{{coupons}}"
+      wx:key="index"
+      class="lkcn-coupon-scroll__item"
+      data-index="{{index}}"
+      data-coupon="{{item}}"
+      bind:tap="onCouponTap"
+    >
+      <view class="lkcn-coupon-scroll__info">
+        <text class="lkcn-coupon-scroll__price">
+          <text class="lkcn-coupon-scroll__symbol">¥</text>{{item.value}}
+        </text>
+        <text class="lkcn-coupon-scroll__label">{{item.label || '商品兑换券'}}</text>
+      </view>
+      <view class="lkcn-coupon-scroll__action">
+        <text class="lkcn-coupon-scroll__action-text">{{item.actionText || '使用'}}</text>
+      </view>
+    </view>
+  </view>
+</scroll-view>

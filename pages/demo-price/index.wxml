@@ -1,0 +1,18 @@
+<view class="demo-page">
+  <view class="demo-block">
+    <text class="demo-block__title">基础用法</text>
+    <view class="demo-block__content demo-block__content--vertical">
+      <lkcn-price value="9.9" />
+      <lkcn-price value="12.9" original="32" />
+      <lkcn-price value="9.9" original="32" prefix="预估到手" />
+      <lkcn-price value="11.9" prefix="一口价" />
+    </view>
+  </view>
+  <view class="demo-block">
+    <text class="demo-block__title">大号价格（会员卡）</text>
+    <view class="demo-block__content">
+      <lkcn-price value="9.9" size="large" />
+      <lkcn-price value="15.90" original="19.90" size="large" />
+    </view>
+  </view>
+</view>

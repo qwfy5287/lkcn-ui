@@ -1,0 +1,12 @@
+<!-- lkcn-notice-bar -->
+<view
+  class="lkcn-notice-bar lkcn-notice-bar--{{theme}} {{customClass}}"
+  bind:tap="onTap"
+>
+  <image wx:if="{{icon}}" class="lkcn-notice-bar__icon" src="{{icon}}" mode="aspectFit" />
+  <view class="lkcn-notice-bar__content">
+    <text class="lkcn-notice-bar__text">{{text}}</text>
+  </view>
+  <text wx:if="{{extra}}" class="lkcn-notice-bar__extra">{{extra}}</text>
+  <text wx:if="{{link}}" class="lkcn-notice-bar__arrow">›</text>
+</view>

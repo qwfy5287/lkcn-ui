@@ -1,0 +1,14 @@
+<!-- lkcn-location-bar -->
+<view class="lkcn-location-bar {{customClass}}" bind:tap="onTap">
+  <image
+    class="lkcn-location-bar__pin"
+    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23222' stroke-width='2'%3E%3Cpath d='M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z'/%3E%3Ccircle cx='12' cy='10' r='3'/%3E%3C/svg%3E"
+    mode="aspectFit"
+  />
+  <text class="lkcn-location-bar__name">{{name}}</text>
+  <text wx:if="{{distance}}" class="lkcn-location-bar__distance">｜{{distance}}</text>
+  <text class="lkcn-location-bar__arrow">›</text>
+  <view wx:if="{{action}}" class="lkcn-location-bar__action" catchtap="onActionTap">
+    <slot></slot>
+  </view>
+</view>

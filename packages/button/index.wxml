@@ -1,0 +1,20 @@
+<!-- lkcn-button -->
+<button
+  class="lkcn-btn lkcn-btn--{{type}} lkcn-btn--{{size}} {{block ? 'lkcn-btn--block' : ''}} {{round ? 'lkcn-btn--round' : ''}} {{plain ? 'lkcn-btn--plain' : ''}} {{disabled ? 'lkcn-btn--disabled' : ''}} {{loading ? 'lkcn-btn--loading' : ''}} {{customClass}}"
+  disabled="{{disabled || loading}}"
+  open-type="{{openType}}"
+  form-type="{{formType}}"
+  hover-class="lkcn-btn--active"
+  hover-stay-time="70"
+  bind:tap="onClick"
+  bind:getuserinfo="onGetUserInfo"
+  bind:getphonenumber="onGetPhoneNumber"
+>
+  <view wx:if="{{loading}}" class="lkcn-btn__loading">
+    <view class="lkcn-btn__loading-dot"></view>
+  </view>
+  <image wx:if="{{icon && !loading}}" class="lkcn-btn__icon" src="{{icon}}" mode="aspectFit" />
+  <view class="lkcn-btn__text">
+    <slot></slot>
+  </view>
+</button>

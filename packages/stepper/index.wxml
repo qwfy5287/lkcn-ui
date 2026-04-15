@@ -1,0 +1,28 @@
+<!-- lkcn-stepper -->
+<view class="lkcn-stepper {{customClass}}">
+  <!-- Collapsed: just the + button -->
+  <view
+    wx:if="{{value <= min}}"
+    class="lkcn-stepper__add lkcn-stepper__add--solo"
+    bind:tap="onAdd"
+  >
+    <text class="lkcn-stepper__icon">+</text>
+  </view>
+
+  <!-- Expanded: - / count / + -->
+  <view wx:else class="lkcn-stepper__controls">
+    <view
+      class="lkcn-stepper__btn lkcn-stepper__btn--minus {{value <= min ? 'lkcn-stepper__btn--disabled' : ''}}"
+      bind:tap="onMinus"
+    >
+      <text class="lkcn-stepper__icon">−</text>
+    </view>
+    <text class="lkcn-stepper__value">{{value}}</text>
+    <view
+      class="lkcn-stepper__btn lkcn-stepper__btn--plus {{value >= max ? 'lkcn-stepper__btn--disabled' : ''}}"
+      bind:tap="onAdd"
+    >
+      <text class="lkcn-stepper__icon">+</text>
+    </view>
+  </view>
+</view>

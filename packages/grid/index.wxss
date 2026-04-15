@@ -1,0 +1,129 @@
+/* lkcn-grid */
+
+.lkcn-grid {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--lkcn-bg-card, #FFFFFF);
+  padding: var(--lkcn-spacing-lg, 32rpx) 0;
+}
+
+/* ========== Grid Item ========== */
+
+.lkcn-grid__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--lkcn-spacing-sm, 16rpx) 0;
+}
+
+/* ========== Column Variants ========== */
+
+.lkcn-grid--col-3 .lkcn-grid__item {
+  width: 33.333%;
+}
+
+.lkcn-grid--col-4 .lkcn-grid__item {
+  width: 25%;
+}
+
+.lkcn-grid--col-5 .lkcn-grid__item {
+  width: 20%;
+}
+
+/* ========== Icon ========== */
+
+.lkcn-grid__icon-wrap {
+  position: relative;
+  margin-bottom: var(--lkcn-spacing-sm, 16rpx);
+}
+
+.lkcn-grid__icon {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+/* 3-column uses larger icons (首页: 到店取/幸运送/瑞幸即享) */
+.lkcn-grid--col-3 .lkcn-grid__icon {
+  width: 104rpx;
+  height: 104rpx;
+}
+
+/* 5-column uses smaller icons (我的页/即享页) */
+.lkcn-grid--col-5 .lkcn-grid__icon {
+  width: 72rpx;
+  height: 72rpx;
+}
+
+/* ========== Badge ========== */
+
+.lkcn-grid__badge {
+  position: absolute;
+  top: -8rpx;
+  right: -16rpx;
+  min-width: 32rpx;
+  height: 32rpx;
+  padding: 0 8rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18rpx;
+  font-weight: var(--lkcn-weight-medium, 500);
+  color: var(--lkcn-text-inverse, #FFFFFF);
+  background-color: var(--lkcn-orange, #FF6B35);
+  border-radius: var(--lkcn-radius-full, 999rpx);
+  line-height: 1;
+}
+
+.lkcn-grid__dot {
+  position: absolute;
+  top: -4rpx;
+  right: -4rpx;
+  width: 16rpx;
+  height: 16rpx;
+  background-color: var(--lkcn-orange, #FF6B35);
+  border-radius: 50%;
+}
+
+/* ========== Text ========== */
+
+.lkcn-grid__text {
+  font-size: var(--lkcn-font-md, 28rpx);
+  font-weight: var(--lkcn-weight-medium, 500);
+  color: var(--lkcn-text-primary, #222222);
+  line-height: 1;
+  text-align: center;
+}
+
+.lkcn-grid--col-5 .lkcn-grid__text {
+  font-size: var(--lkcn-font-sm, 24rpx);
+}
+
+/* ========== Description ========== */
+
+.lkcn-grid__desc {
+  font-size: var(--lkcn-font-xs, 20rpx);
+  color: var(--lkcn-text-tertiary, #999999);
+  margin-top: 8rpx;
+  text-align: center;
+  line-height: 1;
+}
+
+/* ========== Border variant ========== */
+
+.lkcn-grid--border .lkcn-grid__item {
+  border-right: 1rpx solid var(--lkcn-border-light, #F0F0F0);
+  border-bottom: 1rpx solid var(--lkcn-border-light, #F0F0F0);
+}
+
+.lkcn-grid--border.lkcn-grid--col-3 .lkcn-grid__item:nth-child(3n) {
+  border-right: none;
+}
+
+.lkcn-grid--border.lkcn-grid--col-4 .lkcn-grid__item:nth-child(4n) {
+  border-right: none;
+}
+
+.lkcn-grid--border.lkcn-grid--col-5 .lkcn-grid__item:nth-child(5n) {
+  border-right: none;
+}

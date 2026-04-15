@@ -1,0 +1,12 @@
+<!-- lkcn-segment -->
+<view class="lkcn-segment {{round ? 'lkcn-segment--round' : ''}} {{customClass}}">
+  <view
+    wx:for="{{items}}"
+    wx:key="index"
+    class="lkcn-segment__item {{active === index ? 'lkcn-segment__item--active' : ''}}"
+    data-index="{{index}}"
+    bind:tap="onItemTap"
+  >
+    <text class="lkcn-segment__text">{{item.text || item}}</text>
+  </view>
+</view>

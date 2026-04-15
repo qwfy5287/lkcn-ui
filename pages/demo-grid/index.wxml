@@ -1,0 +1,37 @@
+<view class="demo-page">
+  <view class="demo-block">
+    <text class="demo-block__title">3 列（首页模式 — 大图标 + 描述）</text>
+    <lkcn-grid
+      column="{{3}}"
+      items="{{grid3}}"
+      bind:itemtap="onItemTap"
+    />
+  </view>
+
+  <view class="demo-block">
+    <text class="demo-block__title">4 列（首页功能区）</text>
+    <lkcn-grid
+      column="{{4}}"
+      items="{{grid4}}"
+      bind:itemtap="onItemTap"
+    />
+  </view>
+
+  <view class="demo-block">
+    <text class="demo-block__title">5 列（我的页 / 即享页）</text>
+    <lkcn-grid
+      column="{{5}}"
+      items="{{grid5}}"
+      bind:itemtap="onItemTap"
+    />
+  </view>
+
+  <view class="demo-block">
+    <text class="demo-block__title">带 Badge</text>
+    <lkcn-grid
+      column="{{5}}"
+      items="{{grid5badge}}"
+      bind:itemtap="onItemTap"
+    />
+  </view>
+</view>

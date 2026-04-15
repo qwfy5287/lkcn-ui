@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "Grid 宫格导航",
+  "usingComponents": {
+    "lkcn-grid": "../../packages/grid/index"
+  }
+}

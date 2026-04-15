@@ -1,0 +1,16 @@
+<!-- lkcn-floating-button -->
+<view
+  class="lkcn-floating-button {{customClass}}"
+  style="{{positionStyle}}"
+  bind:tap="onTap"
+  catchtouchmove="{{draggable ? 'onMove' : ''}}"
+>
+  <image
+    wx:if="{{icon}}"
+    class="lkcn-floating-button__icon"
+    src="{{icon}}"
+    mode="aspectFit"
+  />
+  <text wx:elif="{{text}}" class="lkcn-floating-button__text">{{text}}</text>
+  <slot wx:else></slot>
+</view>

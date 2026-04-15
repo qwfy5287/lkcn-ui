@@ -1,0 +1,49 @@
+<!-- lkcn-membership-plan -->
+<view class="lkcn-membership-plan {{customClass}}">
+  <!-- Plan tabs -->
+  <view class="lkcn-membership-plan__tabs">
+    <view
+      wx:for="{{plans}}"
+      wx:key="index"
+      class="lkcn-membership-plan__tab {{active === index ? 'lkcn-membership-plan__tab--active' : ''}}"
+      data-index="{{index}}"
+      bind:tap="onTabTap"
+    >
+      <!-- Promotion badge -->
+      <view wx:if="{{item.badge}}" class="lkcn-membership-plan__tab-badge">{{item.badge}}</view>
+
+      <view class="lkcn-membership-plan__tab-content">
+        <text class="lkcn-membership-plan__tab-name">{{item.name}}</text>
+        <view class="lkcn-membership-plan__tab-price">
+          <text class="lkcn-membership-plan__tab-symbol">¥</text>
+          <text class="lkcn-membership-plan__tab-value">{{item.price}}</text>
+          <text wx:if="{{item.originalPrice}}" class="lkcn-membership-plan__tab-original">¥{{item.originalPrice}}</text>
+        </view>
+        <text wx:if="{{item.desc}}" class="lkcn-membership-plan__tab-desc">{{item.desc}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- CTA Button -->
+  <view class="lkcn-membership-plan__cta" bind:tap="onSubscribe">
+    <text class="lkcn-membership-plan__cta-text">{{ctaText || activePlan.ctaText || '立即开通'}}</text>
+  </view>
+
+  <!-- Agreement -->
+  <view wx:if="{{agreement}}" class="lkcn-membership-plan__agreement">
+    <view
+      class="lkcn-membership-plan__checkbox {{agreed ? 'lkcn-membership-plan__checkbox--checked' : ''}}"
+      bind:tap="onToggleAgreed"
+    >
+      <text wx:if="{{agreed}}">✓</text>
+    </view>
+    <text class="lkcn-membership-plan__agreement-text">{{agreement}}</text>
+    <text
+      wx:for="{{agreementLinks}}"
+      wx:key="index"
+      class="lkcn-membership-plan__agreement-link"
+      data-index="{{index}}"
+      bind:tap="onLinkTap"
+    >{{item.text}}</text>
+  </view>
+</view>

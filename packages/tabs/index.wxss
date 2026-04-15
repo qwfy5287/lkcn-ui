@@ -1,0 +1,90 @@
+/* lkcn-tabs */
+
+.lkcn-tabs {
+  background-color: var(--lkcn-bg-card, #FFFFFF);
+}
+
+.lkcn-tabs--sticky {
+  position: sticky;
+  top: 0;
+  z-index: var(--lkcn-z-sticky, 100);
+}
+
+/* ========== Scroll wrapper ========== */
+
+.lkcn-tabs__scroll {
+  width: 100%;
+  white-space: nowrap;
+}
+
+.lkcn-tabs__nav {
+  position: relative;
+  display: inline-flex;
+  min-width: 100%;
+  border-bottom: 1rpx solid var(--lkcn-border-light, #F0F0F0);
+}
+
+/* ========== Individual tab ========== */
+
+.lkcn-tabs__tab {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  min-width: 0;
+  padding: 24rpx 32rpx;
+  cursor: pointer;
+  transition: color var(--lkcn-duration-fast, 150ms);
+}
+
+.lkcn-tabs__tab-text {
+  font-size: var(--lkcn-font-md, 28rpx);
+  font-weight: var(--lkcn-weight-regular, 400);
+  color: var(--lkcn-text-secondary, #666666);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.lkcn-tabs__tab--active .lkcn-tabs__tab-text {
+  font-weight: var(--lkcn-weight-semibold, 600);
+  color: var(--lkcn-text-primary, #222222);
+}
+
+/* ========== Underline indicator ========== */
+
+.lkcn-tabs__line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 6rpx;
+  background-color: var(--lkcn-blue, #1A6EFF);
+  border-radius: 3rpx;
+  transition: transform var(--lkcn-duration-normal, 300ms) var(--lkcn-ease-default),
+              width var(--lkcn-duration-normal, 300ms) var(--lkcn-ease-default);
+}
+
+/* ========== Badge ========== */
+
+.lkcn-tabs__badge {
+  position: relative;
+  top: -4rpx;
+  margin-left: 8rpx;
+  min-width: 28rpx;
+  height: 28rpx;
+  padding: 0 8rpx;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18rpx;
+  color: var(--lkcn-text-inverse, #FFFFFF);
+  background-color: var(--lkcn-orange, #FF6B35);
+  border-radius: var(--lkcn-radius-full, 999rpx);
+  line-height: 1;
+}
+
+/* ========== Content ========== */
+
+.lkcn-tabs__content {
+  /* Slot content renders here */
+}

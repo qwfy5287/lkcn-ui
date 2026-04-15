@@ -1,0 +1,69 @@
+/* lkcn-price */
+
+.lkcn-price {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4rpx;
+  line-height: 1;
+}
+
+/* ========== Prefix text ========== */
+
+.lkcn-price__prefix {
+  font-size: var(--lkcn-font-sm, 24rpx);
+  color: var(--lkcn-text-price, #FF6B35);
+  font-weight: var(--lkcn-weight-regular, 400);
+}
+
+/* ========== Currency symbol ========== */
+
+.lkcn-price__symbol {
+  font-size: var(--lkcn-font-sm, 24rpx);
+  color: var(--lkcn-text-price, #FF6B35);
+  font-weight: var(--lkcn-weight-bold, 700);
+}
+
+/* ========== Integer part — the hero number ========== */
+
+.lkcn-price__integer {
+  font-size: var(--lkcn-font-price, 36rpx);
+  color: var(--lkcn-text-price, #FF6B35);
+  font-weight: var(--lkcn-weight-bold, 700);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ========== Decimal part ========== */
+
+.lkcn-price__decimal {
+  font-size: var(--lkcn-font-sm, 24rpx);
+  color: var(--lkcn-text-price, #FF6B35);
+  font-weight: var(--lkcn-weight-bold, 700);
+}
+
+/* ========== Original price (strikethrough) ========== */
+
+.lkcn-price__original {
+  font-size: var(--lkcn-font-sm, 24rpx);
+  color: var(--lkcn-text-tertiary, #999999);
+  font-weight: var(--lkcn-weight-regular, 400);
+  text-decoration: line-through;
+  margin-left: 8rpx;
+}
+
+/* ========== Large variant — 会员卡页面大号价格 ========== */
+
+.lkcn-price--large .lkcn-price__symbol {
+  font-size: var(--lkcn-font-md, 28rpx);
+}
+
+.lkcn-price--large .lkcn-price__integer {
+  font-size: var(--lkcn-font-price-lg, 48rpx);
+}
+
+.lkcn-price--large .lkcn-price__decimal {
+  font-size: var(--lkcn-font-md, 28rpx);
+}
+
+.lkcn-price--large .lkcn-price__original {
+  font-size: var(--lkcn-font-md, 28rpx);
+}

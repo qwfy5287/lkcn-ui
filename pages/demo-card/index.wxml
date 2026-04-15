@@ -1,0 +1,71 @@
+<view class="demo-page">
+  <view class="demo-block">
+    <text class="demo-block__title">基础卡片</text>
+    <view style="padding: 0 28rpx;">
+      <lkcn-card title="人气推荐" extra="查看更多">
+        <text style="font-size:28rpx;color:#666;">这里是卡片内容区域</text>
+      </lkcn-card>
+    </view>
+  </view>
+
+  <view class="demo-block">
+    <text class="demo-block__title">带阴影 / 带边框</text>
+    <view style="padding: 0 28rpx; display:flex; flex-direction:column; gap:20rpx;">
+      <lkcn-card shadow>
+        <text style="font-size:28rpx;color:#666;">shadow 阴影卡片</text>
+      </lkcn-card>
+      <lkcn-card border>
+        <text style="font-size:28rpx;color:#666;">border 边框卡片</text>
+      </lkcn-card>
+    </view>
+  </view>
+
+  <view class="demo-block">
+    <text class="demo-block__title">NoticeBar 通知栏</text>
+    <view style="padding: 0 28rpx; display:flex; flex-direction:column; gap:16rpx;">
+      <lkcn-notice-bar
+        theme="blue"
+        icon="https://placehold.co/48/1A6EFF/fff?text=Hi"
+        text="Hey，来跟幸运打个招呼"
+        extra="Lv3 小金鹿"
+        link
+      />
+      <lkcn-notice-bar
+        theme="orange"
+        text="邀请好友得0元饮品兑换券"
+        link
+      />
+      <lkcn-notice-bar
+        theme="gold"
+        text="您的瑞王卡即将到期，续费享优惠"
+      />
+    </view>
+  </view>
+
+  <view class="demo-block">
+    <text class="demo-block__title">CouponScroll 优惠券横滑</text>
+    <lkcn-coupon-scroll coupons="{{coupons}}" bind:coupontap="onCouponTap" />
+  </view>
+
+  <view class="demo-block">
+    <text class="demo-block__title">PromoCard 促销卡片</text>
+    <view style="padding: 0 28rpx; display:flex; flex-direction:column; gap:20rpx;">
+      <lkcn-promo-card
+        layout="horizontal"
+        title="标准美式 天天8.9元"
+        subtitle="限时每天一杯 三款任选！"
+        action-text="开卡立享"
+        bg-color="#FFF5EE"
+        image="https://placehold.co/200x160/FFF5EE/FF6B35?text=Coffee"
+      />
+      <lkcn-promo-card
+        layout="horizontal"
+        title="买咖啡 得自嘲熊系列周边"
+        subtitle="立即购买"
+        action-text="立即购买"
+        bg-color="#EEF4FF"
+        image="https://placehold.co/200x160/EEF4FF/1A6EFF?text=Bear"
+      />
+    </view>
+  </view>
+</view>

@@ -1,0 +1,33 @@
+{
+  "name": "lkcn-ui",
+  "version": "1.0.0",
+  "description": "☕ 瑞幸风格微信小程序组件库 | Luckin Coffee Style WeChat Mini Program UI",
+  "main": "packages/index.js",
+  "miniprogram": "packages",
+  "keywords": [
+    "weapp",
+    "miniprogram",
+    "component",
+    "ui",
+    "luckin",
+    "coffee",
+    "wechat",
+    "小程序",
+    "组件库",
+    "瑞幸"
+  ],
+  "files": [
+    "packages",
+    "styles"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/user/lkcn-ui"
+  },
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint packages/",
+    "build": "node scripts/build.js"
+  }
+}

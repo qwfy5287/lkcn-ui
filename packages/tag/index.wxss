@@ -1,0 +1,112 @@
+/* lkcn-tag */
+
+.lkcn-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4rpx;
+  padding: 4rpx 12rpx;
+  font-size: var(--lkcn-font-xs, 20rpx);
+  line-height: var(--lkcn-line-normal, 1.5);
+  white-space: nowrap;
+  border-radius: var(--lkcn-radius-xs, 8rpx);
+  vertical-align: middle;
+}
+
+/* ========== Types ========== */
+
+/* Filled — 实心标签 (新品, 回归, 限时) */
+.lkcn-tag--filled {
+  color: var(--lkcn-text-inverse, #FFFFFF);
+  background-color: var(--lkcn-blue, #1A6EFF);
+}
+
+/* Outlined — 描边标签 (全球销量第一, 瑞幸专属生椰岛) */
+.lkcn-tag--outlined {
+  color: var(--lkcn-blue, #1A6EFF);
+  background-color: transparent;
+  border: 1rpx solid currentColor;
+}
+
+/* Light — 浅底标签 */
+.lkcn-tag--light {
+  color: var(--lkcn-blue, #1A6EFF);
+  background-color: var(--lkcn-blue-light, #EEF4FF);
+}
+
+/* Plain — 无边框纯文字 */
+.lkcn-tag--plain {
+  color: var(--lkcn-text-secondary, #666666);
+  background-color: transparent;
+  padding: 0;
+}
+
+/* ========== Color Variants ========== */
+
+/* Orange — 促销类 (限时, 回归) */
+.lkcn-tag--orange.lkcn-tag--filled {
+  background-color: var(--lkcn-orange, #FF6B35);
+}
+
+.lkcn-tag--orange.lkcn-tag--outlined {
+  color: var(--lkcn-orange, #FF6B35);
+}
+
+.lkcn-tag--orange.lkcn-tag--light {
+  color: var(--lkcn-orange, #FF6B35);
+  background-color: var(--lkcn-orange-light, #FFF5EE);
+}
+
+/* Green — 健康属性类 (0脂百大卡, 100%清爽椰子水) */
+.lkcn-tag--green.lkcn-tag--filled {
+  background-color: var(--lkcn-green, #2B7D5B);
+}
+
+.lkcn-tag--green.lkcn-tag--outlined {
+  color: var(--lkcn-green, #2B7D5B);
+}
+
+.lkcn-tag--green.lkcn-tag--light {
+  color: var(--lkcn-green, #2B7D5B);
+  background-color: var(--lkcn-green-light, #EFF8F4);
+}
+
+/* Gold — VIP 类 */
+.lkcn-tag--gold.lkcn-tag--filled {
+  background-color: var(--lkcn-gold, #C8A26E);
+}
+
+.lkcn-tag--gold.lkcn-tag--outlined {
+  color: var(--lkcn-gold, #C8A26E);
+}
+
+/* ========== Sizes ========== */
+
+.lkcn-tag--small {
+  padding: 2rpx 8rpx;
+  font-size: 18rpx;
+}
+
+.lkcn-tag--medium {
+  padding: 4rpx 12rpx;
+  font-size: var(--lkcn-font-xs, 20rpx);
+}
+
+.lkcn-tag--large {
+  padding: 6rpx 16rpx;
+  font-size: var(--lkcn-font-sm, 24rpx);
+}
+
+/* ========== Modifiers ========== */
+
+.lkcn-tag--round {
+  border-radius: var(--lkcn-radius-full, 999rpx);
+}
+
+/* ========== Close icon ========== */
+
+.lkcn-tag__close {
+  margin-left: 4rpx;
+  font-size: 20rpx;
+  line-height: 1;
+  opacity: 0.7;
+}

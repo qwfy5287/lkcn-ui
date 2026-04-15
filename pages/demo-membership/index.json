@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "会员 & 浮动按钮",
+  "usingComponents": {
+    "lkcn-membership-plan": "../../packages/membership-plan/index",
+    "lkcn-floating-button": "../../packages/floating-button/index"
+  }
+}

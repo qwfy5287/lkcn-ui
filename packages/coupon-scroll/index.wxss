@@ -1,0 +1,65 @@
+/* lkcn-coupon-scroll */
+
+.lkcn-coupon-scroll {
+  width: 100%;
+  white-space: nowrap;
+  background-color: var(--lkcn-bg-card, #FFFFFF);
+}
+
+.lkcn-coupon-scroll__list {
+  display: inline-flex;
+  gap: 16rpx;
+  padding: 16rpx var(--lkcn-page-padding, 28rpx);
+}
+
+/* ========== Coupon Item ========== */
+
+.lkcn-coupon-scroll__item {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--lkcn-orange-light, #FFF5EE);
+  border-radius: var(--lkcn-radius-sm, 16rpx);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.lkcn-coupon-scroll__info {
+  display: flex;
+  align-items: center;
+  gap: 8rpx;
+  padding: 16rpx 20rpx;
+}
+
+.lkcn-coupon-scroll__price {
+  font-size: var(--lkcn-font-lg, 30rpx);
+  font-weight: var(--lkcn-weight-bold, 700);
+  color: var(--lkcn-orange, #FF6B35);
+  line-height: 1;
+}
+
+.lkcn-coupon-scroll__symbol {
+  font-size: var(--lkcn-font-sm, 24rpx);
+}
+
+.lkcn-coupon-scroll__label {
+  font-size: var(--lkcn-font-xs, 20rpx);
+  color: var(--lkcn-orange, #FF6B35);
+  white-space: nowrap;
+}
+
+/* ========== Action button ========== */
+
+.lkcn-coupon-scroll__action {
+  padding: 16rpx 20rpx;
+  background-color: var(--lkcn-orange, #FF6B35);
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+}
+
+.lkcn-coupon-scroll__action-text {
+  font-size: var(--lkcn-font-sm, 24rpx);
+  font-weight: var(--lkcn-weight-medium, 500);
+  color: var(--lkcn-text-inverse, #FFFFFF);
+  white-space: nowrap;
+}

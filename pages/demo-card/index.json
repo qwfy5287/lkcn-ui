@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "Card 卡片容器",
+  "usingComponents": {
+    "lkcn-card": "../../packages/card/index",
+    "lkcn-notice-bar": "../../packages/notice-bar/index",
+    "lkcn-promo-card": "../../packages/promo-card/index",
+    "lkcn-coupon-scroll": "../../packages/coupon-scroll/index"
+  }
+}

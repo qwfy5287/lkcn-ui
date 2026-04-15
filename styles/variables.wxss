@@ -1,0 +1,107 @@
+/**
+ * LKCN UI — Design Tokens
+ * 瑞幸风格 Design Token 变量定义
+ * 在 app.wxss 中 @import 引入即可全局生效
+ *
+ * 用法: @import "lkcn-ui/styles/variables.wxss";
+ */
+
+page {
+  /* ========== Brand Colors ========== */
+  --lkcn-blue: #1A6EFF;
+  --lkcn-blue-light: #EEF4FF;
+  --lkcn-blue-dark: #0B4FCC;
+
+  --lkcn-orange: #FF6B35;
+  --lkcn-orange-light: #FFF5EE;
+  --lkcn-orange-dark: #E55520;
+
+  --lkcn-gold: #C8A26E;
+  --lkcn-gold-light: #FBF5EB;
+
+  --lkcn-green: #2B7D5B;
+  --lkcn-green-light: #EFF8F4;
+
+  --lkcn-brown: #3D2D1F;
+
+  /* ========== Text Colors ========== */
+  --lkcn-text-primary: #222222;
+  --lkcn-text-secondary: #666666;
+  --lkcn-text-tertiary: #999999;
+  --lkcn-text-placeholder: #CCCCCC;
+  --lkcn-text-inverse: #FFFFFF;
+  --lkcn-text-link: #1A6EFF;
+  --lkcn-text-price: #FF6B35;
+
+  /* ========== Background Colors ========== */
+  --lkcn-bg-page: #F5F5F5;
+  --lkcn-bg-card: #FFFFFF;
+  --lkcn-bg-mask: rgba(0, 0, 0, 0.5);
+  --lkcn-bg-disabled: #F0F0F0;
+
+  /* ========== Border Colors ========== */
+  --lkcn-border-light: #F0F0F0;
+  --lkcn-border-default: #E5E5E5;
+  --lkcn-border-dark: #D0D0D0;
+
+  /* ========== Font Size ========== */
+  --lkcn-font-xs: 20rpx;     /* 10px — 极小说明 */
+  --lkcn-font-sm: 24rpx;     /* 12px — 辅助文案、标签页 */
+  --lkcn-font-md: 28rpx;     /* 14px — 正文 */
+  --lkcn-font-lg: 30rpx;     /* 15px — 卡片标题 */
+  --lkcn-font-xl: 34rpx;     /* 17px — 区域标题 */
+  --lkcn-font-xxl: 40rpx;    /* 20px — 页面标题 */
+  --lkcn-font-price: 36rpx;  /* 18px — 价格数字 */
+  --lkcn-font-price-lg: 48rpx; /* 24px — 大号价格 */
+
+  /* ========== Font Weight ========== */
+  --lkcn-weight-regular: 400;
+  --lkcn-weight-medium: 500;
+  --lkcn-weight-semibold: 600;
+  --lkcn-weight-bold: 700;
+
+  /* ========== Line Height ========== */
+  --lkcn-line-tight: 1.2;
+  --lkcn-line-normal: 1.5;
+  --lkcn-line-relaxed: 1.7;
+
+  /* ========== Spacing ========== */
+  --lkcn-spacing-xs: 8rpx;    /* 4px */
+  --lkcn-spacing-sm: 16rpx;   /* 8px */
+  --lkcn-spacing-md: 24rpx;   /* 12px */
+  --lkcn-spacing-lg: 32rpx;   /* 16px */
+  --lkcn-spacing-xl: 48rpx;   /* 24px */
+  --lkcn-spacing-xxl: 64rpx;  /* 32px */
+
+  /* Page-level padding */
+  --lkcn-page-padding: 28rpx;
+  --lkcn-card-padding: 24rpx;
+  --lkcn-card-gap: 20rpx;
+
+  /* ========== Border Radius ========== */
+  --lkcn-radius-xs: 8rpx;     /* 4px — tag, badge */
+  --lkcn-radius-sm: 16rpx;    /* 8px — button, input */
+  --lkcn-radius-md: 24rpx;    /* 12px — card */
+  --lkcn-radius-lg: 40rpx;    /* 20px — modal, sheet */
+  --lkcn-radius-full: 999rpx; /* pill */
+  --lkcn-radius-circle: 50%;  /* avatar */
+
+  /* ========== Shadow (sparingly used) ========== */
+  --lkcn-shadow-sm: 0 2rpx 8rpx rgba(0, 0, 0, 0.04);
+  --lkcn-shadow-md: 0 4rpx 16rpx rgba(0, 0, 0, 0.08);
+
+  /* ========== Animation ========== */
+  --lkcn-duration-fast: 150ms;
+  --lkcn-duration-normal: 300ms;
+  --lkcn-duration-slow: 450ms;
+  --lkcn-ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --lkcn-ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ========== Z-Index ========== */
+  --lkcn-z-base: 1;
+  --lkcn-z-sticky: 100;
+  --lkcn-z-fixed: 200;
+  --lkcn-z-mask: 500;
+  --lkcn-z-popup: 600;
+  --lkcn-z-toast: 700;
+}

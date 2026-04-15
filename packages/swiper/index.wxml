@@ -1,0 +1,49 @@
+<!-- lkcn-swiper -->
+<view class="lkcn-swiper {{customClass}}">
+  <swiper
+    class="lkcn-swiper__track"
+    style="height: {{height}}"
+    autoplay="{{autoplay}}"
+    interval="{{interval}}"
+    duration="{{duration}}"
+    circular="{{circular}}"
+    current="{{current}}"
+    bindchange="onChange"
+    easing-function="easeInOutCubic"
+  >
+    <swiper-item
+      wx:for="{{items}}"
+      wx:key="index"
+      class="lkcn-swiper__item"
+    >
+      <view
+        class="lkcn-swiper__content"
+        data-index="{{index}}"
+        data-item="{{item}}"
+        bind:tap="onItemTap"
+      >
+        <image
+          wx:if="{{item.image || item}}"
+          class="lkcn-swiper__image"
+          src="{{item.image || item}}"
+          mode="{{imageMode}}"
+          lazy-load
+        />
+        <!-- Overlay text (optional) -->
+        <view wx:if="{{item.title}}" class="lkcn-swiper__overlay">
+          <text class="lkcn-swiper__title">{{item.title}}</text>
+          <text wx:if="{{item.subtitle}}" class="lkcn-swiper__subtitle">{{item.subtitle}}</text>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+
+  <!-- Dots indicator -->
+  <view wx:if="{{showDots}}" class="lkcn-swiper__dots">
+    <view
+      wx:for="{{items}}"
+      wx:key="index"
+      class="lkcn-swiper__dot {{innerCurrent === index ? 'lkcn-swiper__dot--active' : ''}}"
+    ></view>
+  </view>
+</view>

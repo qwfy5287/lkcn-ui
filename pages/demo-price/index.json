@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "Price 价格",
+  "usingComponents": {
+    "lkcn-price": "../../packages/price/index"
+  }
+}

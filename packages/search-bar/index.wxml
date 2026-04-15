@@ -1,0 +1,37 @@
+<!-- lkcn-search-bar -->
+<view class="lkcn-search-bar {{focus ? 'lkcn-search-bar--focus' : ''}} {{customClass}}">
+  <view class="lkcn-search-bar__input-wrap">
+    <image
+      wx:if="{{showIcon}}"
+      class="lkcn-search-bar__icon"
+      src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E"
+      mode="aspectFit"
+    />
+    <input
+      class="lkcn-search-bar__input"
+      type="text"
+      value="{{value}}"
+      placeholder="{{placeholder}}"
+      placeholder-class="lkcn-search-bar__placeholder"
+      confirm-type="search"
+      focus="{{autoFocus}}"
+      bindfocus="onFocus"
+      bindblur="onBlur"
+      bindinput="onInput"
+      bindconfirm="onSearch"
+    />
+    <view
+      wx:if="{{value && showClear}}"
+      class="lkcn-search-bar__clear"
+      bind:tap="onClear"
+    >×</view>
+  </view>
+
+  <view
+    wx:if="{{showAction && focus}}"
+    class="lkcn-search-bar__action"
+    bind:tap="onCancel"
+  >
+    <text>{{actionText}}</text>
+  </view>
+</view>

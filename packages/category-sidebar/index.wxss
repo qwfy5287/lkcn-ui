@@ -1,0 +1,103 @@
+/* lkcn-category-sidebar */
+
+.lkcn-category-sidebar {
+  width: 176rpx;
+  background-color: var(--lkcn-bg-page, #F5F5F5);
+  flex-shrink: 0;
+}
+
+/* ========== Item ========== */
+
+.lkcn-category-sidebar__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24rpx 12rpx;
+  min-height: 96rpx;
+  transition: background-color var(--lkcn-duration-fast, 150ms);
+}
+
+.lkcn-category-sidebar__item--active {
+  background-color: var(--lkcn-bg-card, #FFFFFF);
+}
+
+/* ========== Active indicator bar ========== */
+
+.lkcn-category-sidebar__indicator {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6rpx;
+  height: 36rpx;
+  background-color: var(--lkcn-orange, #FF6B35);
+  border-radius: 0 3rpx 3rpx 0;
+}
+
+/* ========== Icon ========== */
+
+.lkcn-category-sidebar__icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-bottom: 8rpx;
+}
+
+/* ========== Tag badge (NEW, 产地季, etc.) ========== */
+
+.lkcn-category-sidebar__tag {
+  font-size: 16rpx;
+  padding: 2rpx 8rpx;
+  border-radius: var(--lkcn-radius-xs, 8rpx);
+  line-height: 1.4;
+  margin-bottom: 4rpx;
+  white-space: nowrap;
+}
+
+.lkcn-category-sidebar__tag--blue {
+  color: var(--lkcn-text-inverse, #FFFFFF);
+  background-color: var(--lkcn-blue, #1A6EFF);
+}
+
+.lkcn-category-sidebar__tag--orange {
+  color: var(--lkcn-text-inverse, #FFFFFF);
+  background-color: var(--lkcn-orange, #FF6B35);
+}
+
+.lkcn-category-sidebar__tag--green {
+  color: var(--lkcn-text-inverse, #FFFFFF);
+  background-color: var(--lkcn-green, #2B7D5B);
+}
+
+.lkcn-category-sidebar__tag--gold {
+  color: var(--lkcn-text-inverse, #FFFFFF);
+  background-color: var(--lkcn-gold, #C8A26E);
+}
+
+/* ========== Text ========== */
+
+.lkcn-category-sidebar__text {
+  font-size: var(--lkcn-font-sm, 24rpx);
+  color: var(--lkcn-text-secondary, #666666);
+  text-align: center;
+  line-height: var(--lkcn-line-tight, 1.2);
+  word-break: break-all;
+}
+
+.lkcn-category-sidebar__item--active .lkcn-category-sidebar__text {
+  color: var(--lkcn-text-primary, #222222);
+  font-weight: var(--lkcn-weight-semibold, 600);
+}
+
+/* ========== Dot ========== */
+
+.lkcn-category-sidebar__dot {
+  position: absolute;
+  top: 16rpx;
+  right: 24rpx;
+  width: 12rpx;
+  height: 12rpx;
+  background-color: var(--lkcn-orange, #FF6B35);
+  border-radius: 50%;
+}

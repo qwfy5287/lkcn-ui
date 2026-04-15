@@ -1,0 +1,36 @@
+<!-- lkcn-level-card -->
+<view class="lkcn-level-card lkcn-level-card--{{theme}} {{customClass}}">
+  <!-- Top section: level name + expiry -->
+  <view class="lkcn-level-card__header">
+    <view class="lkcn-level-card__level">
+      <text class="lkcn-level-card__level-tag">Lv{{level}}</text>
+      <text class="lkcn-level-card__level-name">{{levelName}}</text>
+    </view>
+    <text wx:if="{{expiry}}" class="lkcn-level-card__expiry">{{expiry}}</text>
+  </view>
+
+  <!-- Points display -->
+  <view class="lkcn-level-card__points">
+    <text class="lkcn-level-card__points-value">{{points}}</text>
+    <image
+      wx:if="{{pointsIcon}}"
+      class="lkcn-level-card__points-icon"
+      src="{{pointsIcon}}"
+      mode="aspectFit"
+    />
+  </view>
+
+  <!-- Progress bar + upgrade hint -->
+  <view wx:if="{{showProgress}}" class="lkcn-level-card__progress-wrap">
+    <view class="lkcn-level-card__progress-bar">
+      <view
+        class="lkcn-level-card__progress-fill"
+        style="width: {{progressPercent}}%"
+      ></view>
+    </view>
+    <view wx:if="{{hint}}" class="lkcn-level-card__hint" bind:tap="onHintTap">
+      <text class="lkcn-level-card__hint-text">{{hint}}</text>
+      <text class="lkcn-level-card__hint-arrow">›</text>
+    </view>
+  </view>
+</view>

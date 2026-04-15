@@ -1,0 +1,32 @@
+<!-- lkcn-tabs -->
+<view class="lkcn-tabs {{sticky ? 'lkcn-tabs--sticky' : ''}} {{customClass}}">
+  <scroll-view
+    class="lkcn-tabs__scroll"
+    scroll-x
+    scroll-with-animation
+    scroll-into-view="tab-{{active}}"
+    enhanced
+    show-scrollbar="{{false}}"
+  >
+    <view class="lkcn-tabs__nav">
+      <view
+        wx:for="{{tabs}}"
+        wx:key="index"
+        id="tab-{{index}}"
+        class="lkcn-tabs__tab {{active === index ? 'lkcn-tabs__tab--active' : ''}}"
+        data-index="{{index}}"
+        bind:tap="onTabTap"
+      >
+        <text class="lkcn-tabs__tab-text">{{item.title || item}}</text>
+        <view wx:if="{{item.badge}}" class="lkcn-tabs__badge">{{item.badge}}</view>
+      </view>
+      <!-- Underline indicator -->
+      <view class="lkcn-tabs__line" style="{{lineStyle}}"></view>
+    </view>
+  </scroll-view>
+
+  <!-- Content area (optional slot) -->
+  <view wx:if="{{showContent}}" class="lkcn-tabs__content">
+    <slot></slot>
+  </view>
+</view>

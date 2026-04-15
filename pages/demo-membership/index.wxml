@@ -1,0 +1,28 @@
+<view class="demo-page">
+  <view class="demo-block">
+    <text class="demo-block__title">MembershipPlan 会员方案选择器</text>
+    <lkcn-membership-plan
+      plans="{{plans}}"
+      active="{{planActive}}"
+      agreement="开通会员代表接受"
+      agreement-links="{{links}}"
+      bind:change="onPlanChange"
+      bind:subscribe="onSubscribe"
+    />
+  </view>
+
+  <view class="demo-block">
+    <text class="demo-block__title">FloatingButton 浮动按钮</text>
+    <view class="demo-block__content" style="min-height:300rpx;position:relative;">
+      <text style="font-size:24rpx;color:#999;">浮动按钮已固定在页面右下角 →</text>
+    </view>
+  </view>
+
+  <lkcn-floating-button
+    text="AI\nLucky"
+    right="{{28}}"
+    bottom="{{200}}"
+    draggable
+    bind:tap="onFabTap"
+  />
+</view>

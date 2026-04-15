@@ -1,0 +1,44 @@
+<view class="demo-page">
+  <view class="demo-block">
+    <text class="demo-block__title">基础标签页</text>
+    <lkcn-tabs
+      tabs="{{['经典菜单', '天天9.9', '我的常点']}}"
+      active="{{tabActive1}}"
+      bind:change="onTab1Change"
+    />
+    <view style="padding:32rpx;text-align:center;color:#999;font-size:24rpx;">
+      当前选中：第 {{tabActive1 + 1}} 个标签
+    </view>
+  </view>
+
+  <view class="demo-block">
+    <text class="demo-block__title">带 Badge</text>
+    <lkcn-tabs
+      tabs="{{tabsWithBadge}}"
+      active="{{tabActive2}}"
+      bind:change="onTab2Change"
+    />
+  </view>
+
+  <view class="demo-block">
+    <text class="demo-block__title">SegmentControl 分段切换</text>
+    <view class="demo-block__content">
+      <lkcn-segment
+        items="{{['自提', '外送']}}"
+        active="{{segActive1}}"
+        bind:change="onSeg1Change"
+      />
+    </view>
+  </view>
+
+  <view class="demo-block">
+    <text class="demo-block__title">Segment 3 项</text>
+    <view class="demo-block__content">
+      <lkcn-segment
+        items="{{['全部', '待付款', '待取餐']}}"
+        active="{{segActive2}}"
+        bind:change="onSeg2Change"
+      />
+    </view>
+  </view>
+</view>

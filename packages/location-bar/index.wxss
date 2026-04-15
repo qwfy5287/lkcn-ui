@@ -1,0 +1,43 @@
+/* lkcn-location-bar */
+
+.lkcn-location-bar {
+  display: flex;
+  align-items: center;
+  padding: 20rpx var(--lkcn-page-padding, 28rpx);
+  background-color: var(--lkcn-bg-card, #FFFFFF);
+}
+
+.lkcn-location-bar__pin {
+  width: 32rpx;
+  height: 32rpx;
+  flex-shrink: 0;
+  margin-right: 8rpx;
+}
+
+.lkcn-location-bar__name {
+  font-size: var(--lkcn-font-md, 28rpx);
+  font-weight: var(--lkcn-weight-medium, 500);
+  color: var(--lkcn-text-primary, #222222);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 380rpx;
+}
+
+.lkcn-location-bar__distance {
+  font-size: var(--lkcn-font-sm, 24rpx);
+  color: var(--lkcn-text-tertiary, #999999);
+  margin-left: 4rpx;
+  flex-shrink: 0;
+}
+
+.lkcn-location-bar__arrow {
+  font-size: 28rpx;
+  color: var(--lkcn-text-tertiary, #999999);
+  margin-left: 4rpx;
+}
+
+.lkcn-location-bar__action {
+  margin-left: auto;
+  flex-shrink: 0;
+}

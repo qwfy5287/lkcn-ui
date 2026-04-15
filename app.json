@@ -1,0 +1,22 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/demo-button/index",
+    "pages/demo-tag/index",
+    "pages/demo-price/index",
+    "pages/demo-product-card/index",
+    "pages/demo-grid/index",
+    "pages/demo-tabs/index",
+    "pages/demo-card/index",
+    "pages/demo-data/index",
+    "pages/demo-nav/index",
+    "pages/demo-membership/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "LKCN UI",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#F5F5F5"
+  },
+  "sitemapLocation": "sitemap.json"
+}

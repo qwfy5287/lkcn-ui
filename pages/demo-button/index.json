@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "Button 按钮",
+  "usingComponents": {
+    "lkcn-button": "../../packages/button/index"
+  }
+}
