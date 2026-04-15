@@ -24,7 +24,7 @@
     "type": "git",
     "url": "https://github.com/user/lkcn-ui"
   },
-  "author": "",
+  "author": "qwfy90",
   "license": "MIT",
   "scripts": {
     "lint": "eslint packages/",
